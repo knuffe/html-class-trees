@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wirkerübersicht</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #1f2937
+                );
+
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            padding: 40px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.35);
+
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .beschreibung {
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        select {
+            width: 100%;
+
+            padding: 14px 16px;
+
+            font-size: 17px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: white;
+            color: #111827;
+
+            cursor: pointer;
+
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 14px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #6366f1;
+            color: white;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #4f46e5;
+        }
+
+        .footer {
+            margin-top: 30px;
+
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>Charakterübersicht</h1>
+
+        <p class="beschreibung">
+            Wähle einen Wirker aus:
+        </p>
+
+
+        <select id="seitenAuswahl">
+
+            <option value="">
+                -- Wirker auswählen --
+            </option>
+
+            <option value="Wuestenlaeufer.html">
+                Wuestenlaeufer
+            </option>
+
+            <option value="Sylphir.html">
+                Sylphir
+            </option>
+
+            <option value="Tremoryth.html">
+                Tremoryth
+            </option>
+
+            <option value="Kessler.html">
+                Kessler
+            </option>
+
+            <option value="Schuerer.html">
+                Schuerer
+            </option>
+
+            <option value="Schmelzer.html">
+                Schmelzer
+            </option>
+
+            <option value="Quellhueter.html">
+                Quellhüter
+            </option>
+
+            <option value="Nihilar.html">
+                Nihilar
+            </option>
+
+            <option value="Mistral.html">
+                Mistral
+            </option>
+
+            <option value="Kaltblut.html">
+                Kaltblut
+            </option>
+
+            <option value="Illusionist.html">
+                Illusionist
+            </option>
+
+            <option value="Himmelsweber.html">
+                Himmelsweber
+            </option>
+
+            <option value="Former.html">
+                Former
+            </option>
+
+            <option value="Erdwache.html">
+                Erdwache
+            </option>
+
+            <option value="Dyraa.html">
+                Dyraa
+            </option>
+
+            <option value="Caldera.html">
+                Caldera
+            </option>
+
+            <option value="Aurist.html">
+                Aurist
+            </option>
+
+        </select>
+
+
+        <button onclick="seiteOeffnen()">
+            Öffnen
+        </button>
+
+
+        <div class="footer">
+            17 Charaktere
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function seiteOeffnen() {
+
+            const auswahl =
+                document.getElementById("seitenAuswahl").value;
+
+            if (auswahl !== "") {
+
+                window.location.href = auswahl;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
